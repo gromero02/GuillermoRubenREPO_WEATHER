@@ -194,6 +194,8 @@ public class ConexionMasivaURL {
 			//PRUEBA
 			for(int i=0;i<datosCiudades.size();i++) {
 				for(int j=0;j<4;j++) {
+					System.out.println("CIUDADES");
+					System.out.println();
 					System.out.println(nombresC[i]);
 					System.out.println(datosCiudades.get(i).toString());
 					System.out.println(datosCiudades.get(i).getForecastDay().get(j).getWeather());
