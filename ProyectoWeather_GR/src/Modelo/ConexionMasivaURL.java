@@ -206,7 +206,7 @@ public class ConexionMasivaURL {
 					System.out.println(datosCiudades.get(i).getForecastDay().get(j).getMinTemp());
 					System.out.println("--------------------------------------");
 				}
-				System.out.println("---------------------------------------");
+				System.out.println("--------------------------------------");
 				
 			}
 		}
