@@ -1,17 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
 	<classpathentry kind="src" path="src"/>
-	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/jre"/>
-	<classpathentry kind="lib" path="D:/CFGS_DAM/2ºDAM/AccesoDatos/libreriasProyectoTiempo/gson-2.8.2.jar"/>
-	<classpathentry kind="lib" path="D:/CFGS_DAM/2ºDAM/AccesoDatos/libreriasProyectoTiempo/jackson-annotations-2.9.9.jar"/>
-	<classpathentry kind="lib" path="D:/CFGS_DAM/2ºDAM/AccesoDatos/libreriasProyectoTiempo/jackson-annotations-2.9.9-javadoc.jar"/>
-	<classpathentry kind="lib" path="D:/CFGS_DAM/2ºDAM/AccesoDatos/libreriasProyectoTiempo/jackson-annotations-2.9.9-sources.jar"/>
-	<classpathentry kind="lib" path="D:/CFGS_DAM/2ºDAM/AccesoDatos/libreriasProyectoTiempo/jackson-core-2.9.9.jar"/>
-	<classpathentry kind="lib" path="D:/CFGS_DAM/2ºDAM/AccesoDatos/libreriasProyectoTiempo/jackson-core-2.9.9-javadoc.jar"/>
-	<classpathentry kind="lib" path="D:/CFGS_DAM/2ºDAM/AccesoDatos/libreriasProyectoTiempo/jackson-core-2.9.9-sources.jar"/>
-	<classpathentry kind="lib" path="D:/CFGS_DAM/2ºDAM/AccesoDatos/libreriasProyectoTiempo/jackson-databind-2.9.9.jar"/>
-	<classpathentry kind="lib" path="D:/CFGS_DAM/2ºDAM/AccesoDatos/libreriasProyectoTiempo/jackson-databind-2.9.9-javadoc.jar"/>
-	<classpathentry kind="lib" path="D:/CFGS_DAM/2ºDAM/AccesoDatos/libreriasProyectoTiempo/jackson-databind-2.9.9-sources.jar"/>
-	<classpathentry kind="lib" path="D:/CFGS_DAM/2ºDAM/AccesoDatos/libreriasProyectoTiempo/json-simple-1.1.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/jre">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="C:/Users/rubel/git/repo_local_weather/ProyectoWeather_GR/librerias/gson-2.8.2.jar"/>
+	<classpathentry kind="lib" path="C:/Users/rubel/git/repo_local_weather/ProyectoWeather_GR/librerias/jackson-annotations-2.9.9.jar"/>
+	<classpathentry kind="lib" path="C:/Users/rubel/git/repo_local_weather/ProyectoWeather_GR/librerias/jackson-annotations-2.9.9-javadoc.jar"/>
+	<classpathentry kind="lib" path="C:/Users/rubel/git/repo_local_weather/ProyectoWeather_GR/librerias/jackson-annotations-2.9.9-sources.jar"/>
+	<classpathentry kind="lib" path="C:/Users/rubel/git/repo_local_weather/ProyectoWeather_GR/librerias/jackson-core-2.9.9.jar"/>
+	<classpathentry kind="lib" path="C:/Users/rubel/git/repo_local_weather/ProyectoWeather_GR/librerias/jackson-core-2.9.9-javadoc.jar"/>
+	<classpathentry kind="lib" path="C:/Users/rubel/git/repo_local_weather/ProyectoWeather_GR/librerias/jackson-core-2.9.9-sources.jar"/>
+	<classpathentry kind="lib" path="C:/Users/rubel/git/repo_local_weather/ProyectoWeather_GR/librerias/jackson-databind-2.9.9.jar"/>
+	<classpathentry kind="lib" path="C:/Users/rubel/git/repo_local_weather/ProyectoWeather_GR/librerias/jackson-databind-2.9.9-javadoc.jar"/>
+	<classpathentry kind="lib" path="C:/Users/rubel/git/repo_local_weather/ProyectoWeather_GR/librerias/jackson-databind-2.9.9-sources.jar"/>
+	<classpathentry kind="lib" path="C:/Users/rubel/git/repo_local_weather/ProyectoWeather_GR/librerias/json-simple-1.1.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
