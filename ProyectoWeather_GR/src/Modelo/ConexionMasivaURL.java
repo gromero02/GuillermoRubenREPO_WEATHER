@@ -37,8 +37,8 @@ public class ConexionMasivaURL {
 				nombresC[4] = "Badajoz";
 				nombresC[5] = "Barcelona";
 				nombresC[6] = "Bilbao";
-				nombresC[7] = "Alicante";
-				nombresC[8] = "Santander";
+				nombresC[7] = "Huelva";
+				nombresC[8] = "Ourense";
 				nombresC[9] = "Palencia";
 				
 				return nombresC;
