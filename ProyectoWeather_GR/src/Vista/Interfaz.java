@@ -14,6 +14,7 @@ import javax.swing.border.TitledBorder;
 
 import org.json.simple.parser.ParseException;
 
+import Controlador.Controlador;
 import Modelo.ConexionMasivaURL;
 import Modelo.Forecast;
 
@@ -42,6 +43,8 @@ public class Interfaz extends JFrame {
 	public JLabel iconohuelva;
 	public JLabel iconoourense;
 	public JLabel iconopalencia;
+	
+	public ImageIcon row_albacete;
 
 	public JButton botonalbacete;
 	public JButton botonciudadreal;
@@ -54,29 +57,43 @@ public class Interfaz extends JFrame {
 	public JButton botonourense;
 	public JButton botonpalencia;
 
+	
 	public JPanel paneldia;
 
 	public JLabel grados;
 	public JLabel nombre;
 	public JLabel iconotiempo;
 	public JLabel gradosMm;
-	public JLabel gradoF;
-
+	public JLabel gradosF;
+	
+	
+	public JPanel panelprevisiones;
+	
+	public JLabel lbldia3;
+	public JLabel lbldia4;
+	
+	public JLabel tiempodia1;
+	public JLabel tiempodia2;
+	public JLabel tiempodia3;
+	public JLabel tiempodia4;
+	
+	public JButton botondia1;
+	public JButton botondia2;
+	public JButton botondia3;
+	public JButton botondia4;
+	
+	
 	/**
 	 * Launch the application.
 	 */
+
 	public static void main(String[] args) {
-		EventQueue.invokeLater(new Runnable() {
-			public void run() {
-				try {
-					Interfaz frame = new Interfaz();
-					frame.setVisible(true);
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-			}
-		});
-	}
+        Interfaz frame = new Interfaz();
+        frame.setVisible(true);
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        @SuppressWarnings("unused")
+        Controlador controlador=new Controlador(frame);
+}
 
 	/**
 	 * Create the frame.
@@ -94,15 +111,7 @@ public class Interfaz extends JFrame {
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 
-		ConexionMasivaURL cmurl = new ConexionMasivaURL();
-		String[] nombresC = cmurl.devolverNombresCiudades();
-		ArrayList<Forecast> datosCiudades = null;
-		try {
-			datosCiudades = cmurl.fileToObject(nombresC);
-		} catch (ParseException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+	
 		
 		//Panel mapa
 		JPanel panelmapa = new JPanel();
@@ -153,7 +162,7 @@ public class Interfaz extends JFrame {
 
 		JButton botonbadajoz = new JButton("Badajoz");
 		botonbadajoz.setFont(new Font("Bahnschrift", Font.PLAIN, 17));
-		botonbadajoz.setBounds(194, 304, 83, 43);
+		botonbadajoz.setBounds(194, 302, 83, 43);
 		botonbadajoz.setIconTextGap(0);
 		botonbadajoz.setBorderPainted(false);
 		botonbadajoz.setBorder(null);
@@ -173,7 +182,7 @@ public class Interfaz extends JFrame {
 
 		JButton botonbilbao = new JButton("Bilbao");
 		botonbilbao.setFont(new Font("Bahnschrift", Font.PLAIN, 17));
-		botonbilbao.setBounds(381, 11, 83, 43);
+		botonbilbao.setBounds(381, 10, 83, 43);
 		botonbilbao.setIconTextGap(0);
 		botonbilbao.setBorderPainted(false);
 		botonbilbao.setBorder(null);
@@ -256,7 +265,7 @@ public class Interfaz extends JFrame {
 		Image scaled_badajoz = get_badajoz.getScaledInstance(25, 25, java.awt.Image.SCALE_SMOOTH);
 		ImageIcon finalbadajoz = new ImageIcon(scaled_badajoz);
 		iconobadajoz.setIcon(finalbadajoz);
-		iconobadajoz.setBounds(178, 314, 25, 25);
+		iconobadajoz.setBounds(178, 312, 25, 25);
 		panelmapa.add(iconobadajoz);
 		
 		JLabel iconobarcelona = new JLabel("");
@@ -274,7 +283,7 @@ public class Interfaz extends JFrame {
 		Image scaled_bilbao= get_bilbao.getScaledInstance(25, 25, java.awt.Image.SCALE_SMOOTH);
 		ImageIcon finalbilbao = new ImageIcon(scaled_bilbao);
 		iconobilbao.setIcon(finalbilbao);
-		iconobilbao.setBounds(371, 21, 25, 25);
+		iconobilbao.setBounds(371, 20, 25, 25);
 		panelmapa.add(iconobilbao);
 		
 		JLabel iconohuelva = new JLabel("");
@@ -381,7 +390,7 @@ public class Interfaz extends JFrame {
 		
 		JLabel lbldia2 = new JLabel("Ma\u00F1ana");
 		lbldia2.setFont(new Font("Bahnschrift", Font.PLAIN, 25));
-		lbldia2.setBounds(10, 106, 86, 40);
+		lbldia2.setBounds(10, 106, 114, 40);
 		panelprevisiones.add(lbldia2);
 		
 		JLabel lbldia3 = new JLabel("Mie.");
@@ -420,18 +429,38 @@ public class Interfaz extends JFrame {
 		
 		JButton botondia1 = new JButton("");
 		botondia1.setBounds(0, 61, 306, 36);
+		botondia1.setIconTextGap(0);
+		botondia1.setBorderPainted(false);
+		botondia1.setBorder(null);
+		botondia1.setFocusPainted(false);
+		botondia1.setContentAreaFilled(false);
 		panelprevisiones.add(botondia1);
 		
 		JButton botondia2 = new JButton("");
 		botondia2.setBounds(0, 103, 306, 36);
+		botondia2.setIconTextGap(0);
+		botondia2.setBorderPainted(false);
+		botondia2.setBorder(null);
+		botondia2.setFocusPainted(false);
+		botondia2.setContentAreaFilled(false);
 		panelprevisiones.add(botondia2);
 		
 		JButton botondia3 = new JButton("");
 		botondia3.setBounds(0, 145, 306, 36);
+		botondia3.setIconTextGap(0);
+		botondia3.setBorderPainted(false);
+		botondia3.setBorder(null);
+		botondia3.setFocusPainted(false);
+		botondia3.setContentAreaFilled(false);
 		panelprevisiones.add(botondia3);
 		
 		JButton botondia4 = new JButton("");
 		botondia4.setBounds(0, 188, 306, 36);
+		botondia4.setIconTextGap(0);
+		botondia4.setBorderPainted(false);
+		botondia4.setBorder(null);
+		botondia4.setFocusPainted(false);
+		botondia4.setContentAreaFilled(false);
 		panelprevisiones.add(botondia4);
 
 	}
