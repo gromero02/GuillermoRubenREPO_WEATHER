@@ -201,8 +201,8 @@ public class ConexionMasivaURL {
 					System.out.println(datosCiudades.get(i).getForecastDay().get(j).getWeatherIcon());
 					System.out.println(datosCiudades.get(i).getForecastDay().get(j).getForecastDate());
 					System.out.println(datosCiudades.get(i).getForecastDay().get(j).getWeather());
-					System.out.println(datosCiudades.get(i).getForecastDay().get(j).getMaxTemp());
-					System.out.println(datosCiudades.get(i).getForecastDay().get(j).getMinTemp());
+					System.out.println(datosCiudades.get(i).getForecastDay().get(j).getMaxTemp()+"/"+datosCiudades.get(i).getForecastDay().get(j).getMinTemp());
+					System.out.println(datosCiudades.get(i).getForecastDay().get(j).getMaxTempF()+"/"+datosCiudades.get(i).getForecastDay().get(j).getMinTempF());
 					System.out.println("--------------------------------------");
 				}
 				System.out.println("-------------------------------------");
