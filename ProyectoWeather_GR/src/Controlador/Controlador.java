@@ -57,53 +57,67 @@ public class Controlador implements ActionListener {
 			datospanelmapa(0, datosCiudades);
 			datospanelprevisiones(0, datosCiudades);
 			fechadias(datosCiudades);
-			
+			itf.nombre.setToolTipText("0");
 		} else if (e.getSource() == itf.botonciudadreal) {
 			datospaneldia(1, 0, datosCiudades, nombresC);
 			datospanelprevisiones(1, datosCiudades);
+			itf.nombre.setToolTipText("1");
 		} else if (e.getSource() == itf.botonmadrid) {
 			datospaneldia(2, 0, datosCiudades, nombresC);
 			datospanelprevisiones(2, datosCiudades);
+			itf.nombre.setToolTipText("2");
 		} else if (e.getSource() == itf.botonmurcia) {
 			datospaneldia(3, 0, datosCiudades, nombresC);
 			datospanelprevisiones(3, datosCiudades);
+			itf.nombre.setToolTipText("3");
 		} else if (e.getSource() == itf.botonbadajoz) {
 			datospaneldia(4, 0, datosCiudades, nombresC);
 			datospanelprevisiones(4, datosCiudades);
+			itf.nombre.setToolTipText("4");
 		} else if (e.getSource() == itf.botonbarcelona) {
 			datospaneldia(5, 0, datosCiudades, nombresC);
 			datospanelprevisiones(5, datosCiudades);
+			itf.nombre.setToolTipText("5");
 		} else if (e.getSource() == itf.botonbilbao) {
 			datospaneldia(6, 0, datosCiudades, nombresC);
 			datospanelprevisiones(6, datosCiudades);
+			itf.nombre.setToolTipText("6");
 		} else if (e.getSource() == itf.botonhuelva) {
 			datospaneldia(7, 0, datosCiudades, nombresC);
 			datospanelprevisiones(7, datosCiudades);
+			itf.nombre.setToolTipText("7");
 		} else if (e.getSource() == itf.botonourense) {
 			datospaneldia(8, 0, datosCiudades, nombresC);
 			datospanelprevisiones(8, datosCiudades);
+			itf.nombre.setToolTipText("8");
 		} else if (e.getSource() == itf.botonpalencia) {
 			datospaneldia(9, 0, datosCiudades, nombresC);
 			datospanelprevisiones(9, datosCiudades);
-		
-		}else if (e.getSource() == itf.botondia2) {
-	
-		}else if (e.getSource() == itf.botondia3) {
+			itf.nombre.setToolTipText("9");
 			
+			
+		}else if (e.getSource() == itf.botondia2) {
+			datospaneldia(Integer.parseInt(itf.nombre.getToolTipText()), 1, datosCiudades, nombresC);
+			datospanelmapa(1, datosCiudades);
+			datospanelprevisiones(Integer.parseInt(itf.nombre.getToolTipText()), datosCiudades);
+		}else if (e.getSource() == itf.botondia3) {
+			datospaneldia(Integer.parseInt(itf.nombre.getToolTipText()), 2, datosCiudades, nombresC);
+			datospanelmapa(2, datosCiudades);
+			datospanelprevisiones(Integer.parseInt(itf.nombre.getToolTipText()), datosCiudades);
 		}else if (e.getSource() == itf.botondia4) {
-			datospaneldia(9, 3, datosCiudades, nombresC);
-			datospanelprevisiones(9, datosCiudades);
+			datospaneldia(Integer.parseInt(itf.nombre.getToolTipText()), 3, datosCiudades, nombresC);
+			datospanelmapa(3, datosCiudades);
+			datospanelprevisiones(Integer.parseInt(itf.nombre.getToolTipText()), datosCiudades);
 		}
+		System.out.println(itf.nombre.getToolTipText());
 	}
 
-	
 
 	public void datospaneldia(int posicion, int dia, ArrayList<Forecast> datosCiudades, String[] nombresC) {
 
 		// Nombre
 		itf.nombre.setText(nombresC[posicion]);
 		
-
 		// Grados
 		int temperatura = (Integer
 				.parseInt(datosCiudades.get(posicion).getForecastDay().get(dia).getMaxTemp())

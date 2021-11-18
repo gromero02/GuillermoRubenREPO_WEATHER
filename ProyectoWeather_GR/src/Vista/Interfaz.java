@@ -121,6 +121,7 @@ public class Interfaz extends JFrame {
 
 		// Botones mapa
 		botonalbacete = new JButton("Albacete");
+		botonalbacete.setToolTipText("");
 		botonalbacete.setFont(new Font("Bahnschrift", Font.PLAIN, 17));
 		botonalbacete.setBounds(444, 294, 83, 43);
 		botonalbacete.setIconTextGap(0);
@@ -284,7 +285,7 @@ public class Interfaz extends JFrame {
 		panelmapa.add(iconopalencia);
 
 		JLabel fotomapa = new JLabel("");
-		fotomapa.setIcon(new ImageIcon("C:\\Users\\rubel\\git\\repo_local_weather\\ProyectoWeather_GR\\imagenes\\mapa.jpg"));
+		fotomapa.setIcon(new ImageIcon("imagenes\\mapa.jpg"));
 		fotomapa.setBounds(0, 0, 787, 564);
 		panelmapa.add(fotomapa);
 
@@ -307,6 +308,7 @@ public class Interfaz extends JFrame {
 		paneldia.add(grados);
 
 		nombre = new JLabel("Ciudad");
+		nombre.setToolTipText("1");
 		nombre.setFont(new Font("Bahnschrift", Font.PLAIN, 35));
 		nombre.setHorizontalAlignment(SwingConstants.CENTER);
 		nombre.setBounds(0, 11, 304, 40);
@@ -345,6 +347,7 @@ public class Interfaz extends JFrame {
 		panelprevisiones.setLayout(null);
 
 		JLabel lblprevision = new JLabel("Prevision para 3 d\u00EDas");
+		lblprevision.setToolTipText("");
 		lblprevision.setBackground(new Color(30, 144, 255));
 		lblprevision.setBounds(0, 10, 296, 30);
 		panelprevisiones.add(lblprevision);
