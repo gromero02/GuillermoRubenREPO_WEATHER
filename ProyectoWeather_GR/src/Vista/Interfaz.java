@@ -113,6 +113,16 @@ public class Interfaz extends JFrame {
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
+		JPanel panel = new JPanel();
+		panel.setBounds(-86, 0, 1182, 571);
+		contentPane.add(panel);
+		panel.setLayout(null);
+		
+		JLabel lblNewLabel = new JLabel("");
+		lblNewLabel.setBounds(88, 0, 1094, 567);
+		lblNewLabel.setIcon(new ImageIcon("C:\\Users\\Guillermo\\git\\GuillermoRubenREPO_WEATHER\\ProyectoWeather_GR\\imagenes\\cielo.jpg"));
+		panel.add(lblNewLabel);
+		
 		//Panel mapa
 		panelmapa = new JPanel();
 		panelmapa.setBounds(0, 0, 791, 571);
@@ -447,3 +457,4 @@ public class Interfaz extends JFrame {
 
 	}
 }
+
