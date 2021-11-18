@@ -72,12 +72,14 @@ public class Interfaz extends JFrame {
 	public JLabel lbldia3;
 	public JLabel lbldia4;
 	
-	public JLabel tiempodia1;
 	public JLabel tiempodia2;
 	public JLabel tiempodia3;
 	public JLabel tiempodia4;
 	
-	public JButton botondia1;
+	public JLabel iconodia2;
+	public JLabel iconodia3;
+	public JLabel iconodia4;
+	
 	public JButton botondia2;
 	public JButton botondia3;
 	public JButton botondia4;
@@ -224,61 +226,61 @@ public class Interfaz extends JFrame {
 		iconoalbacete = new JLabel("");
 		ImageIcon finalalbacete = new ImageIcon(ruta);
 		iconoalbacete.setIcon(finalalbacete);
-		iconoalbacete.setBounds(425, 304, 25, 25);
+		iconoalbacete.setBounds(425, 304, 32, 32);
 		panelmapa.add(iconoalbacete);
 		
 		iconociudadreal = new JLabel("");
 		ImageIcon finalciudadreal = new ImageIcon(ruta);
 		iconociudadreal.setIcon(finalciudadreal);
-		iconociudadreal.setBounds(340, 304, 25, 25);
+		iconociudadreal.setBounds(340, 304, 32, 32);
 		panelmapa.add(iconociudadreal);
 		
 		iconomadrid = new JLabel("");
 		ImageIcon finalmadrid = new ImageIcon(ruta);
 		iconomadrid.setIcon(finalmadrid);
-		iconomadrid.setBounds(341, 211, 25, 25);
+		iconomadrid.setBounds(341, 211,32, 32);
 		panelmapa.add(iconomadrid);
 
 		iconomurcia = new JLabel("");
 		ImageIcon finalmurcia = new ImageIcon(ruta);
 		iconomurcia.setIcon(finalmurcia);
-		iconomurcia.setBounds(456, 374, 25, 25);
+		iconomurcia.setBounds(456, 374,32, 32);
 		panelmapa.add(iconomurcia);
 		
 		iconobadajoz = new JLabel("");
 		ImageIcon finalbadajoz = new ImageIcon(ruta);
 		iconobadajoz.setIcon(finalbadajoz);
-		iconobadajoz.setBounds(178, 312, 25, 25);
+		iconobadajoz.setBounds(178, 312, 32, 32);
 		panelmapa.add(iconobadajoz);
 		
 		iconobarcelona = new JLabel("");
 		ImageIcon finalbarcelona = new ImageIcon(ruta);
 		iconobarcelona.setIcon(finalbarcelona);
-		iconobarcelona.setBounds(618, 142, 25, 25);
+		iconobarcelona.setBounds(618, 142, 32, 32);
 		panelmapa.add(iconobarcelona);
 		
 		iconobilbao = new JLabel("");
 		ImageIcon finalbilbao = new ImageIcon(ruta);
 		iconobilbao.setIcon(finalbilbao);
-		iconobilbao.setBounds(371, 20, 25, 25);
+		iconobilbao.setBounds(371, 20, 32, 32);
 		panelmapa.add(iconobilbao);
 		
 		iconohuelva = new JLabel("");
 		ImageIcon finalhuelva = new ImageIcon(ruta);
 		iconohuelva.setIcon(finalhuelva);
-		iconohuelva.setBounds(180, 412, 25, 25);
+		iconohuelva.setBounds(180, 412, 32, 32);
 		panelmapa.add(iconohuelva);
 		
 		iconoourense = new JLabel("");
 		ImageIcon finalourense = new ImageIcon(ruta);
 		iconoourense.setIcon(finalourense);
-		iconoourense.setBounds(131, 83, 25, 25);
+		iconoourense.setBounds(131, 83, 32, 32);
 		panelmapa.add(iconoourense);
 		
 		iconopalencia = new JLabel("");
 		ImageIcon finalpalencia = new ImageIcon(ruta);
 		iconopalencia.setIcon(finalpalencia);
-		iconopalencia.setBounds(324, 102, 25, 25);
+		iconopalencia.setBounds(324, 102, 32, 32);
 		panelmapa.add(iconopalencia);
 
 		JLabel fotomapa = new JLabel("");
@@ -298,7 +300,7 @@ public class Interfaz extends JFrame {
 		lblMaxminC.setBounds(10, 241, 129, 40);
 		paneldia.add(lblMaxminC);
 
-		grados = new JLabel("10\u00BAC");
+		grados = new JLabel("--\u00BAC");
 		grados.setFont(new Font("Bahnschrift", Font.PLAIN, 45));
 		grados.setHorizontalAlignment(SwingConstants.CENTER);
 		grados.setBounds(0, 175, 304, 55);
@@ -344,46 +346,46 @@ public class Interfaz extends JFrame {
 
 		JLabel lblprevision = new JLabel("Prevision para 3 d\u00EDas");
 		lblprevision.setBackground(new Color(30, 144, 255));
-		lblprevision.setBounds(0, 11, 296, 46);
+		lblprevision.setBounds(0, 10, 296, 30);
 		panelprevisiones.add(lblprevision);
 		lblprevision.setHorizontalAlignment(SwingConstants.CENTER);
 		lblprevision.setFont(new Font("Bahnschrift", Font.PLAIN, 29));
 		
 		JLabel lbldia2 = new JLabel("Ma\u00F1ana");
 		lbldia2.setFont(new Font("Bahnschrift", Font.PLAIN, 25));
-		lbldia2.setBounds(10, 106, 114, 40);
+		lbldia2.setBounds(10, 60, 114, 40);
 		panelprevisiones.add(lbldia2);
 		
 		lbldia3 = new JLabel("Mie.");
 		lbldia3.setFont(new Font("Bahnschrift", Font.PLAIN, 25));
-		lbldia3.setBounds(10, 149, 138, 40);
+		lbldia3.setBounds(10, 120, 128, 40);
 		panelprevisiones.add(lbldia3);
 		
 		lbldia4 = new JLabel("Jue.");
 		lbldia4.setFont(new Font("Bahnschrift", Font.PLAIN, 25));
-		lbldia4.setBounds(10, 193, 138, 40);
+		lbldia4.setBounds(10, 180, 138, 40);
 		panelprevisiones.add(lbldia4);
 		
-		tiempodia2 = new JLabel("Soleado");
+		tiempodia2 = new JLabel("--\u00BAC");
 		tiempodia2.setHorizontalAlignment(SwingConstants.TRAILING);
 		tiempodia2.setFont(new Font("Bahnschrift", Font.PLAIN, 25));
-		tiempodia2.setBounds(20, 106, 276, 40);
+		tiempodia2.setBounds(195, 60, 100, 40);
 		panelprevisiones.add(tiempodia2);
 		
-		tiempodia3 = new JLabel("Nuboso");
+		tiempodia3 = new JLabel("--\u00BAC");
 		tiempodia3.setHorizontalAlignment(SwingConstants.TRAILING);
 		tiempodia3.setFont(new Font("Bahnschrift", Font.PLAIN, 25));
-		tiempodia3.setBounds(10, 147, 286, 40);
+		tiempodia3.setBounds(196, 120, 100, 40);
 		panelprevisiones.add(tiempodia3);
 		
-		tiempodia4 = new JLabel("Cubierto");
+		tiempodia4 = new JLabel("--\u00BAC");
 		tiempodia4.setHorizontalAlignment(SwingConstants.TRAILING);
 		tiempodia4.setFont(new Font("Bahnschrift", Font.PLAIN, 25));
-		tiempodia4.setBounds(10, 193, 286, 40);
+		tiempodia4.setBounds(196, 180, 100, 40);
 		panelprevisiones.add(tiempodia4);
 		
 		botondia2 = new JButton("");
-		botondia2.setBounds(0, 103, 306, 36);
+		botondia2.setBounds(0, 60, 306, 36);
 		botondia2.setIconTextGap(0);
 		botondia2.setBorderPainted(false);
 		botondia2.setBorder(null);
@@ -392,7 +394,7 @@ public class Interfaz extends JFrame {
 		panelprevisiones.add(botondia2);
 		
 		botondia3 = new JButton("");
-		botondia3.setBounds(0, 145, 306, 36);
+		botondia3.setBounds(0, 120, 306, 36);
 		botondia3.setIconTextGap(0);
 		botondia3.setBorderPainted(false);
 		botondia3.setBorder(null);
@@ -401,13 +403,31 @@ public class Interfaz extends JFrame {
 		panelprevisiones.add(botondia3);
 		
 		botondia4 = new JButton("");
-		botondia4.setBounds(0, 188, 306, 36);
+		botondia4.setBounds(0, 180, 306, 36);
 		botondia4.setIconTextGap(0);
 		botondia4.setBorderPainted(false);
 		botondia4.setBorder(null);
 		botondia4.setFocusPainted(false);
 		botondia4.setContentAreaFilled(false);
 		panelprevisiones.add(botondia4);
+		
+		iconodia2 = new JLabel("");
+		iconodia2.setBounds(134, 60,32, 32);
+		ImageIcon iconodia2img= new ImageIcon(ruta);
+		iconodia2.setIcon(iconodia2img);
+		panelprevisiones.add(iconodia2);
+		
+		iconodia3 = new JLabel("");
+		iconodia3.setBounds(134, 120, 32, 32);
+		ImageIcon iconodia3img = new ImageIcon(ruta);
+		iconodia3.setIcon(iconodia3img);
+		panelprevisiones.add(iconodia3);
+		
+		iconodia4 = new JLabel("");
+		iconodia4.setBounds(134, 180, 32, 32);
+		ImageIcon iconodia4img = new ImageIcon(ruta);
+		iconodia4.setIcon(iconodia4img);
+		panelprevisiones.add(iconodia4);
 		
 	
 
