@@ -96,8 +96,6 @@ public class Controlador implements ActionListener {
 		}else if (e.getSource() == itf.botondia2) {
 	
 		}else if (e.getSource() == itf.botondia3) {
-			datospaneldia(9, 2, datosCiudades, nombresC);
-			datospanelprevisiones(9, datosCiudades);
 			
 		}else if (e.getSource() == itf.botondia4) {
 			datospaneldia(9, 3, datosCiudades, nombresC);

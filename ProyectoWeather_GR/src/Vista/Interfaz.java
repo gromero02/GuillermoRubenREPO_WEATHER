@@ -110,8 +110,6 @@ public class Interfaz extends JFrame {
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
-
-	
 		
 		//Panel mapa
 		panelmapa = new JPanel();
@@ -430,6 +428,8 @@ public class Interfaz extends JFrame {
 		botondia4.setFocusPainted(false);
 		botondia4.setContentAreaFilled(false);
 		panelprevisiones.add(botondia4);
+		
+	
 
 	}
 }
