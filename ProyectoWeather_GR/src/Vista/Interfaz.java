@@ -304,7 +304,7 @@ public class Interfaz extends JFrame {
 		grados.setBounds(0, 175, 304, 55);
 		paneldia.add(grados);
 
-		nombre = new JLabel("Manzanares");
+		nombre = new JLabel("Ciudad");
 		nombre.setFont(new Font("Bahnschrift", Font.PLAIN, 35));
 		nombre.setHorizontalAlignment(SwingConstants.CENTER);
 		nombre.setBounds(0, 11, 304, 40);
@@ -323,13 +323,13 @@ public class Interfaz extends JFrame {
 		lblMaxminF.setBounds(10, 279, 129, 40);
 		paneldia.add(lblMaxminF);
 
-		gradosMm = new JLabel("20/14 \u00BAC");
+		gradosMm = new JLabel("-- \u00BAC");
 		gradosMm.setFont(new Font("Bahnschrift", Font.PLAIN, 25));
 		gradosMm.setHorizontalAlignment(SwingConstants.CENTER);
 		gradosMm.setBounds(185, 241, 119, 40);
 		paneldia.add(gradosMm);
 
-		gradosF = new JLabel("52/46 \u00BAF");
+		gradosF = new JLabel("-- \u00BAF");
 		gradosF.setFont(new Font("Bahnschrift", Font.PLAIN, 25));
 		gradosF.setHorizontalAlignment(SwingConstants.CENTER);
 		gradosF.setBounds(185, 279, 119, 40);
@@ -342,17 +342,12 @@ public class Interfaz extends JFrame {
 		contentPane.add(panelprevisiones);
 		panelprevisiones.setLayout(null);
 
-		JLabel lblprevision = new JLabel("Prevision para 4 d\u00EDas");
+		JLabel lblprevision = new JLabel("Prevision para 3 d\u00EDas");
 		lblprevision.setBackground(new Color(30, 144, 255));
 		lblprevision.setBounds(0, 11, 296, 46);
 		panelprevisiones.add(lblprevision);
 		lblprevision.setHorizontalAlignment(SwingConstants.CENTER);
 		lblprevision.setFont(new Font("Bahnschrift", Font.PLAIN, 29));
-		
-		JLabel lbldia1 = new JLabel("Hoy");
-		lbldia1.setFont(new Font("Bahnschrift", Font.PLAIN, 25));
-		lbldia1.setBounds(10, 62, 72, 40);
-		panelprevisiones.add(lbldia1);
 		
 		JLabel lbldia2 = new JLabel("Ma\u00F1ana");
 		lbldia2.setFont(new Font("Bahnschrift", Font.PLAIN, 25));
@@ -368,12 +363,6 @@ public class Interfaz extends JFrame {
 		lbldia4.setFont(new Font("Bahnschrift", Font.PLAIN, 25));
 		lbldia4.setBounds(10, 193, 138, 40);
 		panelprevisiones.add(lbldia4);
-		
-		tiempodia1 = new JLabel("Lluvia");
-		tiempodia1.setHorizontalAlignment(SwingConstants.TRAILING);
-		tiempodia1.setFont(new Font("Bahnschrift", Font.PLAIN, 25));
-		tiempodia1.setBounds(10, 62, 286, 40);
-		panelprevisiones.add(tiempodia1);
 		
 		tiempodia2 = new JLabel("Soleado");
 		tiempodia2.setHorizontalAlignment(SwingConstants.TRAILING);
@@ -392,15 +381,6 @@ public class Interfaz extends JFrame {
 		tiempodia4.setFont(new Font("Bahnschrift", Font.PLAIN, 25));
 		tiempodia4.setBounds(10, 193, 286, 40);
 		panelprevisiones.add(tiempodia4);
-		
-		botondia1 = new JButton("");
-		botondia1.setBounds(0, 61, 306, 36);
-		botondia1.setIconTextGap(0);
-		botondia1.setBorderPainted(false);
-		botondia1.setBorder(null);
-		botondia1.setFocusPainted(false);
-		botondia1.setContentAreaFilled(false);
-		panelprevisiones.add(botondia1);
 		
 		botondia2 = new JButton("");
 		botondia2.setBounds(0, 103, 306, 36);
