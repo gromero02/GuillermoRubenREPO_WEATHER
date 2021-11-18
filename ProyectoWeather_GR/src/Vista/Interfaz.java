@@ -31,6 +31,9 @@ public class Interfaz extends JFrame {
 
 	public JPanel contentPane;
 	
+	public JPanel panelinicio;
+	public JButton botoninicio;
+	
 	public JPanel panelmapa;
 	
 	public JLabel iconoalbacete;
@@ -113,15 +116,22 @@ public class Interfaz extends JFrame {
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
-		JPanel panel = new JPanel();
-		panel.setBounds(-86, 0, 1182, 571);
-		contentPane.add(panel);
-		panel.setLayout(null);
+		panelinicio = new JPanel();
+		panelinicio.setBounds(-86, 0, 1182, 571);
+		contentPane.add(panelinicio);
+		panelinicio.setLayout(null);
 		
 		JLabel lblNewLabel = new JLabel("");
 		lblNewLabel.setBounds(88, 0, 1094, 567);
-		lblNewLabel.setIcon(new ImageIcon("C:\\Users\\Guillermo\\git\\GuillermoRubenREPO_WEATHER\\ProyectoWeather_GR\\imagenes\\cielo.jpg"));
-		panel.add(lblNewLabel);
+		lblNewLabel.setIcon(new ImageIcon("imagenes/cielo.jpg"));
+		panelinicio.add(lblNewLabel);
+		
+		botoninicio = new JButton("ABRIR APP");
+		botoninicio.setFont(new Font("Bahnschrift", Font.BOLD, 26));
+		botoninicio.setBackground(Color.BLUE);
+		botoninicio.setForeground(Color.WHITE);
+		botoninicio.setBounds(880, 474, 178, 85);
+		panelinicio.add(botoninicio);
 		
 		//Panel mapa
 		panelmapa = new JPanel();

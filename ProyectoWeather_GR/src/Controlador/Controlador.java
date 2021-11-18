@@ -37,6 +37,7 @@ public class Controlador implements ActionListener {
 		this.itf.botondia2.addActionListener(this);
 		this.itf.botondia3.addActionListener(this);
 		this.itf.botondia4.addActionListener(this);
+		this.itf.botoninicio.addActionListener(this);
 
 	}
 
@@ -52,7 +53,10 @@ public class Controlador implements ActionListener {
 			// TODO Auto-generated catch block
 			e1.printStackTrace();
 		}
-		if (e.getSource() == itf.botonalbacete) {
+		
+		if(e.getSource() == itf.botoninicio) {
+			itf.panelinicio.setVisible(false);
+		} else if (e.getSource() == itf.botonalbacete) {
 			datospaneldia(0, 0, datosCiudades, nombresC);
 			datospanelmapa(0, datosCiudades);
 			datospanelprevisiones(0, datosCiudades);
