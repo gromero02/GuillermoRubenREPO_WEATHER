@@ -296,7 +296,7 @@ public class Interfaz extends JFrame {
 		panelmapa.add(iconopalencia);
 
 		JLabel fotomapa = new JLabel("");
-		fotomapa.setIcon(new ImageIcon("imagenes\\mapa.jpg"));
+		fotomapa.setIcon(new ImageIcon("imagenes\\mapab.jpg"));
 		fotomapa.setBounds(0, 0, 787, 564);
 		panelmapa.add(fotomapa);
 
