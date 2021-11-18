@@ -121,9 +121,10 @@ public class Interfaz extends JFrame {
 
 		// Botones mapa
 		botonalbacete = new JButton("Albacete");
+		botonalbacete.setForeground(new Color(0, 0, 0));
 		botonalbacete.setToolTipText("");
-		botonalbacete.setFont(new Font("Bahnschrift", Font.PLAIN, 17));
-		botonalbacete.setBounds(444, 294, 83, 43);
+		botonalbacete.setFont(new Font("Bahnschrift", Font.BOLD, 19));
+		botonalbacete.setBounds(470, 294, 83, 43);
 		botonalbacete.setIconTextGap(0);
 		botonalbacete.setBorderPainted(false);
 		botonalbacete.setBorder(null);
@@ -132,8 +133,9 @@ public class Interfaz extends JFrame {
 		panelmapa.add(botonalbacete);
 
 		botonciudadreal = new JButton("C.Real");
-		botonciudadreal.setFont(new Font("Bahnschrift", Font.PLAIN, 17));
-		botonciudadreal.setBounds(350, 294, 83, 43);
+		botonciudadreal.setForeground(new Color(0, 0, 0));
+		botonciudadreal.setFont(new Font("Bahnschrift", Font.BOLD, 19));
+		botonciudadreal.setBounds(342, 294, 83, 43);
 		botonciudadreal.setIconTextGap(0);
 		botonciudadreal.setBorderPainted(false);
 		botonciudadreal.setBorder(null);
@@ -142,7 +144,8 @@ public class Interfaz extends JFrame {
 		panelmapa.add(botonciudadreal);
 
 		botonmadrid = new JButton("Madrid");
-		botonmadrid.setFont(new Font("Bahnschrift", Font.PLAIN, 17));
+		botonmadrid.setForeground(new Color(0, 0, 0));
+		botonmadrid.setFont(new Font("Bahnschrift", Font.BOLD, 19));
 		botonmadrid.setBounds(350, 203, 89, 43);
 		botonmadrid.setIconTextGap(0);
 		botonmadrid.setBorderPainted(false);
@@ -152,8 +155,9 @@ public class Interfaz extends JFrame {
 		panelmapa.add(botonmadrid);
 
 		botonmurcia = new JButton("Murcia");
-		botonmurcia.setFont(new Font("Bahnschrift", Font.PLAIN, 17));
-		botonmurcia.setBounds(466, 365, 83, 43);
+		botonmurcia.setForeground(new Color(0, 0, 0));
+		botonmurcia.setFont(new Font("Bahnschrift", Font.BOLD, 19));
+		botonmurcia.setBounds(460, 359, 83, 43);
 		botonmurcia.setIconTextGap(0);
 		botonmurcia.setBorderPainted(false);
 		botonmurcia.setBorder(null);
@@ -162,8 +166,9 @@ public class Interfaz extends JFrame {
 		panelmapa.add(botonmurcia);
 
 		botonbadajoz = new JButton("Badajoz");
-		botonbadajoz.setFont(new Font("Bahnschrift", Font.PLAIN, 17));
-		botonbadajoz.setBounds(194, 302, 83, 43);
+		botonbadajoz.setForeground(new Color(0, 0, 0));
+		botonbadajoz.setFont(new Font("Bahnschrift", Font.BOLD, 19));
+		botonbadajoz.setBounds(171, 294, 97, 43);
 		botonbadajoz.setIconTextGap(0);
 		botonbadajoz.setBorderPainted(false);
 		botonbadajoz.setBorder(null);
@@ -172,8 +177,9 @@ public class Interfaz extends JFrame {
 		panelmapa.add(botonbadajoz);
 
 		botonbarcelona = new JButton("Barcelona");
-		botonbarcelona.setFont(new Font("Bahnschrift", Font.PLAIN, 17));
-		botonbarcelona.setBounds(643, 132, 83, 43);
+		botonbarcelona.setForeground(new Color(0, 0, 0));
+		botonbarcelona.setFont(new Font("Bahnschrift", Font.BOLD, 19));
+		botonbarcelona.setBounds(643, 132, 101, 43);
 		botonbarcelona.setIconTextGap(0);
 		botonbarcelona.setBorderPainted(false);
 		botonbarcelona.setBorder(null);
@@ -182,8 +188,9 @@ public class Interfaz extends JFrame {
 		panelmapa.add(botonbarcelona);
 
 		botonbilbao = new JButton("Bilbao");
-		botonbilbao.setFont(new Font("Bahnschrift", Font.PLAIN, 17));
-		botonbilbao.setBounds(381, 10, 83, 43);
+		botonbilbao.setForeground(new Color(0, 0, 0));
+		botonbilbao.setFont(new Font("Bahnschrift", Font.BOLD, 19));
+		botonbilbao.setBounds(381, 12, 101, 43);
 		botonbilbao.setIconTextGap(0);
 		botonbilbao.setBorderPainted(false);
 		botonbilbao.setBorder(null);
@@ -192,8 +199,9 @@ public class Interfaz extends JFrame {
 		panelmapa.add(botonbilbao);
 
 		botonhuelva = new JButton("Huelva");
-		botonhuelva.setFont(new Font("Bahnschrift", Font.PLAIN, 17));
-		botonhuelva.setBounds(194, 403, 83, 43);
+		botonhuelva.setForeground(new Color(0, 0, 0));
+		botonhuelva.setFont(new Font("Bahnschrift", Font.BOLD, 19));
+		botonhuelva.setBounds(194, 403, 89, 43);
 		botonhuelva.setIconTextGap(0);
 		botonhuelva.setBorderPainted(false);
 		botonhuelva.setBorder(null);
@@ -202,8 +210,9 @@ public class Interfaz extends JFrame {
 		panelmapa.add(botonhuelva);
 
 		botonourense = new JButton("Ourense");
-		botonourense.setFont(new Font("Bahnschrift", Font.PLAIN, 17));
-		botonourense.setBounds(149, 75, 83, 43);
+		botonourense.setForeground(new Color(0, 0, 0));
+		botonourense.setFont(new Font("Bahnschrift", Font.BOLD, 19));
+		botonourense.setBounds(149, 75, 105, 43);
 		botonourense.setIconTextGap(0);
 		botonourense.setBorderPainted(false);
 		botonourense.setBorder(null);
@@ -212,8 +221,9 @@ public class Interfaz extends JFrame {
 		panelmapa.add(botonourense);
 
 		botonpalencia = new JButton("Palencia");
-		botonpalencia.setFont(new Font("Bahnschrift", Font.PLAIN, 17));
-		botonpalencia.setBounds(342, 92, 83, 43);
+		botonpalencia.setForeground(new Color(0, 0, 0));
+		botonpalencia.setFont(new Font("Bahnschrift", Font.BOLD, 19));
+		botonpalencia.setBounds(342, 92, 97, 43);
 		botonpalencia.setIconTextGap(0);
 		botonpalencia.setBorderPainted(false);
 		botonpalencia.setBorder(null);
@@ -227,61 +237,62 @@ public class Interfaz extends JFrame {
 		iconoalbacete = new JLabel("");
 		ImageIcon finalalbacete = new ImageIcon(ruta);
 		iconoalbacete.setIcon(finalalbacete);
-		iconoalbacete.setBounds(425, 304, 32, 32);
+		iconoalbacete.setBounds(424, 294, 40, 40);
 		panelmapa.add(iconoalbacete);
 		
 		iconociudadreal = new JLabel("");
+		iconociudadreal.setFont(new Font("Tahoma", Font.BOLD, 10));
 		ImageIcon finalciudadreal = new ImageIcon(ruta);
 		iconociudadreal.setIcon(finalciudadreal);
-		iconociudadreal.setBounds(340, 304, 32, 32);
+		iconociudadreal.setBounds(311, 293, 40, 40);
 		panelmapa.add(iconociudadreal);
 		
 		iconomadrid = new JLabel("");
 		ImageIcon finalmadrid = new ImageIcon(ruta);
 		iconomadrid.setIcon(finalmadrid);
-		iconomadrid.setBounds(341, 211,32, 32);
+		iconomadrid.setBounds(317, 203,40, 40);
 		panelmapa.add(iconomadrid);
 
 		iconomurcia = new JLabel("");
 		ImageIcon finalmurcia = new ImageIcon(ruta);
 		iconomurcia.setIcon(finalmurcia);
-		iconomurcia.setBounds(456, 374,32, 32);
+		iconomurcia.setBounds(424, 359,40, 40);
 		panelmapa.add(iconomurcia);
 		
 		iconobadajoz = new JLabel("");
 		ImageIcon finalbadajoz = new ImageIcon(ruta);
 		iconobadajoz.setIcon(finalbadajoz);
-		iconobadajoz.setBounds(178, 312, 32, 32);
+		iconobadajoz.setBounds(138, 294, 40, 40);
 		panelmapa.add(iconobadajoz);
 		
 		iconobarcelona = new JLabel("");
 		ImageIcon finalbarcelona = new ImageIcon(ruta);
 		iconobarcelona.setIcon(finalbarcelona);
-		iconobarcelona.setBounds(618, 142, 32, 32);
+		iconobarcelona.setBounds(600, 132, 40, 40);
 		panelmapa.add(iconobarcelona);
 		
 		iconobilbao = new JLabel("");
 		ImageIcon finalbilbao = new ImageIcon(ruta);
 		iconobilbao.setIcon(finalbilbao);
-		iconobilbao.setBounds(371, 20, 32, 32);
+		iconobilbao.setBounds(355, 12, 40, 40);
 		panelmapa.add(iconobilbao);
 		
 		iconohuelva = new JLabel("");
 		ImageIcon finalhuelva = new ImageIcon(ruta);
 		iconohuelva.setIcon(finalhuelva);
-		iconohuelva.setBounds(180, 412, 32, 32);
+		iconohuelva.setBounds(160, 403, 40, 40);
 		panelmapa.add(iconohuelva);
 		
 		iconoourense = new JLabel("");
 		ImageIcon finalourense = new ImageIcon(ruta);
 		iconoourense.setIcon(finalourense);
-		iconoourense.setBounds(131, 83, 32, 32);
+		iconoourense.setBounds(115, 75, 40, 40);
 		panelmapa.add(iconoourense);
 		
 		iconopalencia = new JLabel("");
 		ImageIcon finalpalencia = new ImageIcon(ruta);
 		iconopalencia.setIcon(finalpalencia);
-		iconopalencia.setBounds(324, 102, 32, 32);
+		iconopalencia.setBounds(304, 92, 40, 40);
 		panelmapa.add(iconopalencia);
 
 		JLabel fotomapa = new JLabel("");

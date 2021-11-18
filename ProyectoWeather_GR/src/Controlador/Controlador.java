@@ -52,7 +52,7 @@ public class Controlador implements ActionListener {
 			// TODO Auto-generated catch block
 			e1.printStackTrace();
 		}
-		if (e.getSource() == itf.botonalbacete  ) {
+		if (e.getSource() == itf.botonalbacete) {
 			datospaneldia(0, 0, datosCiudades, nombresC);
 			datospanelmapa(0, datosCiudades);
 			datospanelprevisiones(0, datosCiudades);
@@ -94,17 +94,16 @@ public class Controlador implements ActionListener {
 			datospaneldia(9, 0, datosCiudades, nombresC);
 			datospanelprevisiones(9, datosCiudades);
 			itf.nombre.setToolTipText("9");
-			
-			
-		}else if (e.getSource() == itf.botondia2) {
+
+		} else if (e.getSource() == itf.botondia2) {
 			datospaneldia(Integer.parseInt(itf.nombre.getToolTipText()), 1, datosCiudades, nombresC);
 			datospanelmapa(1, datosCiudades);
 			datospanelprevisiones(Integer.parseInt(itf.nombre.getToolTipText()), datosCiudades);
-		}else if (e.getSource() == itf.botondia3) {
+		} else if (e.getSource() == itf.botondia3) {
 			datospaneldia(Integer.parseInt(itf.nombre.getToolTipText()), 2, datosCiudades, nombresC);
 			datospanelmapa(2, datosCiudades);
 			datospanelprevisiones(Integer.parseInt(itf.nombre.getToolTipText()), datosCiudades);
-		}else if (e.getSource() == itf.botondia4) {
+		} else if (e.getSource() == itf.botondia4) {
 			datospaneldia(Integer.parseInt(itf.nombre.getToolTipText()), 3, datosCiudades, nombresC);
 			datospanelmapa(3, datosCiudades);
 			datospanelprevisiones(Integer.parseInt(itf.nombre.getToolTipText()), datosCiudades);
@@ -112,42 +111,39 @@ public class Controlador implements ActionListener {
 		System.out.println(itf.nombre.getToolTipText());
 	}
 
-
 	public void datospaneldia(int posicion, int dia, ArrayList<Forecast> datosCiudades, String[] nombresC) {
 
 		// Nombre
-		itf.nombre.setText(nombresC[posicion]);
-		
+		itf.nombre.setText("Hoy: "+nombresC[posicion]);
+
 		// Grados
-		int temperatura = (Integer
-				.parseInt(datosCiudades.get(posicion).getForecastDay().get(dia).getMaxTemp())
-				+ Integer.parseInt( datosCiudades.get(posicion).getForecastDay().get(dia).getMinTemp()))
-				/ 2;
+		int temperatura = (Integer.parseInt(datosCiudades.get(posicion).getForecastDay().get(dia).getMaxTemp())
+				+ Integer.parseInt(datosCiudades.get(posicion).getForecastDay().get(dia).getMinTemp())) / 2;
 		itf.grados.setText(temperatura + "ºC");
 
 		// Maxima y minima ºC
-		itf.gradosMm.setText( datosCiudades.get(posicion).getForecastDay().get(dia).getMaxTemp() + "/"
-				+datosCiudades.get(posicion).getForecastDay().get(dia).getMinTemp() + " ºC");
+		itf.gradosMm.setText(datosCiudades.get(posicion).getForecastDay().get(dia).getMaxTemp() + "/"
+				+ datosCiudades.get(posicion).getForecastDay().get(dia).getMinTemp() + " ºC");
 
 		// Maxima y minima ºF
 		itf.gradosF.setText(datosCiudades.get(posicion).getForecastDay().get(dia).getMaxTempF() + "/"
-				+datosCiudades.get(posicion).getForecastDay().get(dia).getMinTempF() + " ºF");
+				+ datosCiudades.get(posicion).getForecastDay().get(dia).getMinTempF() + " ºF");
 
 		// Foto tiempo
 		itf.iconotiempo.setIcon(escalarfoto(posicion, dia, datosCiudades, 100, 100));
 	}
 
-	public void datospanelmapa (int dia, ArrayList<Forecast> datosCiudades) {
-		itf.iconoalbacete.setIcon(escalarfoto(0, dia, datosCiudades, 32, 32));
-		itf.iconociudadreal.setIcon(escalarfoto(1, dia, datosCiudades,32, 32));
-		itf.iconomadrid.setIcon(escalarfoto(2, dia, datosCiudades,32, 32));
-		itf.iconomurcia.setIcon(escalarfoto(3, dia, datosCiudades, 32, 32));
-		itf.iconobadajoz.setIcon(escalarfoto(4, dia, datosCiudades, 32, 32));
-		itf.iconobarcelona.setIcon(escalarfoto(5, dia, datosCiudades,32, 32));
-		itf.iconobilbao.setIcon(escalarfoto(6, dia, datosCiudades, 32, 32));
-		itf.iconohuelva.setIcon(escalarfoto(7, dia, datosCiudades, 32, 32));
-		itf.iconoourense.setIcon(escalarfoto(8, dia, datosCiudades, 32, 32));
-		itf.iconopalencia.setIcon(escalarfoto(9, dia, datosCiudades, 32, 32));
+	public void datospanelmapa(int dia, ArrayList<Forecast> datosCiudades) {
+		itf.iconoalbacete.setIcon(escalarfoto(0, dia, datosCiudades, 40, 40));
+		itf.iconociudadreal.setIcon(escalarfoto(1, dia, datosCiudades, 40, 40));
+		itf.iconomadrid.setIcon(escalarfoto(2, dia, datosCiudades, 40, 40));
+		itf.iconomurcia.setIcon(escalarfoto(3, dia, datosCiudades, 40, 40));
+		itf.iconobadajoz.setIcon(escalarfoto(4, dia, datosCiudades, 40, 40));
+		itf.iconobarcelona.setIcon(escalarfoto(5, dia, datosCiudades, 40, 40));
+		itf.iconobilbao.setIcon(escalarfoto(6, dia, datosCiudades, 40, 40));
+		itf.iconohuelva.setIcon(escalarfoto(7, dia, datosCiudades, 40, 40));
+		itf.iconoourense.setIcon(escalarfoto(8, dia, datosCiudades, 40, 40));
+		itf.iconopalencia.setIcon(escalarfoto(9, dia, datosCiudades, 40, 40));
 
 	}
 
@@ -167,23 +163,23 @@ public class Controlador implements ActionListener {
 		System.out.println(fechafinal);
 		for (int i = 0; i < diasemana.length; i++) {
 			if (diasemana[i].equalsIgnoreCase(fechafinal)) {
-				itf.lbldia3.setText(diasemana[i + 2]+".");
-				itf.lbldia4.setText(diasemana[i + 3]+".");
+				itf.lbldia3.setText(diasemana[i + 2] + ".");
+				itf.lbldia4.setText(diasemana[i + 3] + ".");
 			}
 		}
 	}
 
 	public void datospanelprevisiones(int posicion, ArrayList<Forecast> datosCiudades) {
-		itf.tiempodia2.setText( datosCiudades.get(posicion).getForecastDay().get(1).getMaxTemp() + "/"
-				+datosCiudades.get(posicion).getForecastDay().get(1).getMinTemp() + " ºC");
-		itf.tiempodia3.setText( datosCiudades.get(posicion).getForecastDay().get(2).getMaxTemp() + "/"
-				+datosCiudades.get(posicion).getForecastDay().get(2).getMinTemp() + " ºC");
-		itf.tiempodia4.setText( datosCiudades.get(posicion).getForecastDay().get(3).getMaxTemp() + "/"
-				+datosCiudades.get(posicion).getForecastDay().get(3).getMinTemp() + " ºC");
+		itf.tiempodia2.setText(datosCiudades.get(posicion).getForecastDay().get(1).getMaxTemp() + "/"
+				+ datosCiudades.get(posicion).getForecastDay().get(1).getMinTemp() + " ºC");
+		itf.tiempodia3.setText(datosCiudades.get(posicion).getForecastDay().get(2).getMaxTemp() + "/"
+				+ datosCiudades.get(posicion).getForecastDay().get(2).getMinTemp() + " ºC");
+		itf.tiempodia4.setText(datosCiudades.get(posicion).getForecastDay().get(3).getMaxTemp() + "/"
+				+ datosCiudades.get(posicion).getForecastDay().get(3).getMinTemp() + " ºC");
 		itf.iconodia2.setIcon(escalarfoto(posicion, 1, datosCiudades, 32, 32));
 		itf.iconodia3.setIcon(escalarfoto(posicion, 2, datosCiudades, 32, 32));
 		itf.iconodia4.setIcon(escalarfoto(posicion, 3, datosCiudades, 32, 32));
-		
+
 	}
 
 	public String seleccionarfotos(int posicion, int dia, ArrayList<Forecast> datosCiudades) {
