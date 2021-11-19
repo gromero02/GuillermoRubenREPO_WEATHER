@@ -38,12 +38,17 @@ public class Controlador implements ActionListener {
 		this.itf.botondia3.addActionListener(this);
 		this.itf.botondia4.addActionListener(this);
 		this.itf.botoninicio.addActionListener(this);
+		itf.paneldia.setVisible(false);
+		itf.panelprevisiones.setVisible(false);
+		itf.panelmapa.setVisible(false);
 
 	}
 
 	@SuppressWarnings("static-access")
 	@Override
 	public void actionPerformed(ActionEvent e) {
+		int random = (int)(Math.random()*10);
+		
 		// Conseguir datos de la clase ConexionMasivaURL
 		String[] nombresC = cmurl.devolverNombresCiudades();
 		ArrayList<Forecast> datosCiudades = null;
@@ -54,65 +59,106 @@ public class Controlador implements ActionListener {
 			e1.printStackTrace();
 		}
 		
+		String fecha = datosCiudades.get(0).getForecastDay().get(0).getForecastDate();
+		String diasemana[] = { "Lun", "Mar", "Mié", "Jue", "Vie", "Sáb", "Dom" };
+	
+		SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+		Date d = null;
+		try {
+			d = sdf.parse(fecha);
+		} catch (java.text.ParseException e2) {
+			// TODO Auto-generated catch block
+			e2.printStackTrace();
+		}
+		sdf.applyPattern("EEE");
+		String fechafinal = sdf.format(d);
+		String dia2 ="",dia3 = "", dia4="";
+		for (int i = 0; i < diasemana.length; i++) {
+			if (diasemana[i].equalsIgnoreCase(fechafinal)) {
+				itf.lbldia3.setText(diasemana[i + 2] + ".");
+				itf.lbldia4.setText(diasemana[i + 3] + ".");
+				dia2 = diasemana[i+1];
+				dia3 = diasemana[i+2];
+				dia4 = diasemana[i+3];
+			}
+		}
+		
 		if(e.getSource() == itf.botoninicio) {
 			itf.panelinicio.setVisible(false);
+			itf.paneldia.setVisible(true);
+			itf.panelprevisiones.setVisible(true);
+			itf.panelmapa.setVisible(true);
+			datospanelmapa(0, datosCiudades);
+			datospaneldia(random,0,datosCiudades,nombresC);
+			datospanelprevisiones(random,datosCiudades);
+			
 		} else if (e.getSource() == itf.botonalbacete) {
 			datospaneldia(0, 0, datosCiudades, nombresC);
 			datospanelmapa(0, datosCiudades);
 			datospanelprevisiones(0, datosCiudades);
-			fechadias(datosCiudades);
+		
 			itf.nombre.setToolTipText("0");
 		} else if (e.getSource() == itf.botonciudadreal) {
 			datospaneldia(1, 0, datosCiudades, nombresC);
 			datospanelprevisiones(1, datosCiudades);
+			datospanelmapa(0, datosCiudades);
 			itf.nombre.setToolTipText("1");
 		} else if (e.getSource() == itf.botonmadrid) {
 			datospaneldia(2, 0, datosCiudades, nombresC);
 			datospanelprevisiones(2, datosCiudades);
+			datospanelmapa(0, datosCiudades);
 			itf.nombre.setToolTipText("2");
 		} else if (e.getSource() == itf.botonmurcia) {
 			datospaneldia(3, 0, datosCiudades, nombresC);
 			datospanelprevisiones(3, datosCiudades);
+			datospanelmapa(0, datosCiudades);
 			itf.nombre.setToolTipText("3");
 		} else if (e.getSource() == itf.botonbadajoz) {
 			datospaneldia(4, 0, datosCiudades, nombresC);
 			datospanelprevisiones(4, datosCiudades);
+			datospanelmapa(0, datosCiudades);
 			itf.nombre.setToolTipText("4");
 		} else if (e.getSource() == itf.botonbarcelona) {
 			datospaneldia(5, 0, datosCiudades, nombresC);
 			datospanelprevisiones(5, datosCiudades);
+			datospanelmapa(0, datosCiudades);
 			itf.nombre.setToolTipText("5");
 		} else if (e.getSource() == itf.botonbilbao) {
 			datospaneldia(6, 0, datosCiudades, nombresC);
 			datospanelprevisiones(6, datosCiudades);
+			datospanelmapa(0, datosCiudades);
 			itf.nombre.setToolTipText("6");
 		} else if (e.getSource() == itf.botonhuelva) {
 			datospaneldia(7, 0, datosCiudades, nombresC);
 			datospanelprevisiones(7, datosCiudades);
+			datospanelmapa(0, datosCiudades);
 			itf.nombre.setToolTipText("7");
 		} else if (e.getSource() == itf.botonourense) {
 			datospaneldia(8, 0, datosCiudades, nombresC);
 			datospanelprevisiones(8, datosCiudades);
+			datospanelmapa(0, datosCiudades);
 			itf.nombre.setToolTipText("8");
 		} else if (e.getSource() == itf.botonpalencia) {
 			datospaneldia(9, 0, datosCiudades, nombresC);
 			datospanelprevisiones(9, datosCiudades);
+			datospanelmapa(0, datosCiudades);
 			itf.nombre.setToolTipText("9");
-
 		} else if (e.getSource() == itf.botondia2) {
 			datospaneldia(Integer.parseInt(itf.nombre.getToolTipText()), 1, datosCiudades, nombresC);
 			datospanelmapa(1, datosCiudades);
 			datospanelprevisiones(Integer.parseInt(itf.nombre.getToolTipText()), datosCiudades);
+			itf.nombre.setText(dia2+": "+nombresC[Integer.parseInt(itf.nombre.getToolTipText())]);
 		} else if (e.getSource() == itf.botondia3) {
 			datospaneldia(Integer.parseInt(itf.nombre.getToolTipText()), 2, datosCiudades, nombresC);
 			datospanelmapa(2, datosCiudades);
 			datospanelprevisiones(Integer.parseInt(itf.nombre.getToolTipText()), datosCiudades);
+			itf.nombre.setText(dia3+": "+nombresC[Integer.parseInt(itf.nombre.getToolTipText())]);
 		} else if (e.getSource() == itf.botondia4) {
 			datospaneldia(Integer.parseInt(itf.nombre.getToolTipText()), 3, datosCiudades, nombresC);
 			datospanelmapa(3, datosCiudades);
 			datospanelprevisiones(Integer.parseInt(itf.nombre.getToolTipText()), datosCiudades);
+			itf.nombre.setText(dia4+": "+nombresC[Integer.parseInt(itf.nombre.getToolTipText())]);
 		}
-		System.out.println(itf.nombre.getToolTipText());
 	}
 
 	public void datospaneldia(int posicion, int dia, ArrayList<Forecast> datosCiudades, String[] nombresC) {
@@ -149,28 +195,6 @@ public class Controlador implements ActionListener {
 		itf.iconoourense.setIcon(escalarfoto(8, dia, datosCiudades, 40, 40));
 		itf.iconopalencia.setIcon(escalarfoto(9, dia, datosCiudades, 40, 40));
 
-	}
-
-	public void fechadias(ArrayList<Forecast> datosCiudades) {
-		String fecha = datosCiudades.get(0).getForecastDay().get(0).getForecastDate();
-		String diasemana[] = { "Lun", "Mar", "Mié", "Jue", "Vie", "Sáb", "Dom" };
-		SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
-		Date d = null;
-		try {
-			d = sdf.parse(fecha);
-		} catch (java.text.ParseException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		sdf.applyPattern("EEE");
-		String fechafinal = sdf.format(d);
-		System.out.println(fechafinal);
-		for (int i = 0; i < diasemana.length; i++) {
-			if (diasemana[i].equalsIgnoreCase(fechafinal)) {
-				itf.lbldia3.setText(diasemana[i + 2] + ".");
-				itf.lbldia4.setText(diasemana[i + 3] + ".");
-			}
-		}
 	}
 
 	public void datospanelprevisiones(int posicion, ArrayList<Forecast> datosCiudades) {

@@ -121,15 +121,20 @@ public class Interfaz extends JFrame {
 		contentPane.add(panelinicio);
 		panelinicio.setLayout(null);
 		
-		JLabel lblNewLabel = new JLabel("");
-		lblNewLabel.setBounds(88, 0, 1094, 567);
-		lblNewLabel.setIcon(new ImageIcon("imagenes/cielo.jpg"));
-		panelinicio.add(lblNewLabel);
+		JLabel fotometeo = new JLabel("");
+		fotometeo.setBounds(88, 0, 1094, 567);
+		fotometeo.setIcon(new ImageIcon("imagenes/cielo.jpg"));
+		panelinicio.add(fotometeo);
 		
-		botoninicio = new JButton("ABRIR APP");
+		botoninicio = new JButton("");
 		botoninicio.setFont(new Font("Bahnschrift", Font.BOLD, 26));
-		botoninicio.setBackground(Color.BLUE);
+		botoninicio.setBackground(new Color(0, 0, 0));
 		botoninicio.setForeground(Color.WHITE);
+		botoninicio.setIconTextGap(0);
+		botoninicio.setBorderPainted(false);
+		botoninicio.setBorder(null);
+		botoninicio.setFocusPainted(false);
+		botoninicio.setContentAreaFilled(false);
 		botoninicio.setBounds(880, 474, 178, 85);
 		panelinicio.add(botoninicio);
 		
