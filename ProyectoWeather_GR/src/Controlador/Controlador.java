@@ -53,15 +53,23 @@ public class Controlador implements ActionListener {
 		String[] nombresC = cmurl.devolverNombresCiudades();
 		ArrayList<Forecast> datosCiudades = null;
 		try {
+			cmurl.crearConexionUrl(nombresC);
 			datosCiudades = cmurl.fileToObject(nombresC);
-		} catch (ParseException e1) {
+		} catch (Exception e1) {
 			// TODO Auto-generated catch block
 			e1.printStackTrace();
 		}
 		
 		String fecha = datosCiudades.get(0).getForecastDay().get(0).getForecastDate();
-		String diasemana[] = { "Lun", "Mar", "Mié", "Jue", "Vie", "Sáb", "Dom" };
-	
+		ArrayList <String> diasemana = new <String> ArrayList();
+			diasemana.add("Lun.");
+			diasemana.add("Mar.");
+			diasemana.add("Mie.");
+			diasemana.add("Jue.");
+			diasemana.add("Vie.");
+			diasemana.add("Sab.");
+			diasemana.add("Dom.");
+		
 		SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
 		Date d = null;
 		try {
@@ -73,13 +81,34 @@ public class Controlador implements ActionListener {
 		sdf.applyPattern("EEE");
 		String fechafinal = sdf.format(d);
 		String dia2 ="",dia3 = "", dia4="";
-		for (int i = 0; i < diasemana.length; i++) {
-			if (diasemana[i].equalsIgnoreCase(fechafinal)) {
-				itf.lbldia3.setText(diasemana[i + 2] + ".");
-				itf.lbldia4.setText(diasemana[i + 3] + ".");
-				dia2 = diasemana[i+1];
-				dia3 = diasemana[i+2];
-				dia4 = diasemana[i+3];
+		for (int i = 0; i < diasemana.size(); i++) {
+			if (diasemana.get(i).equalsIgnoreCase(fechafinal) && i == 0 && i == 1 && i == 2 && i == 3) {
+				itf.lbldia3.setText(diasemana.get(i + 2) + ".");
+				itf.lbldia4.setText(diasemana.get(i + 3) + ".");
+				dia2 = diasemana.get(i + 1);
+				dia3 = diasemana.get(i + 2);
+				dia4 = diasemana.get(i + 3);
+				
+			}else if (diasemana.get(i).equalsIgnoreCase(fechafinal) && i == 4){
+				itf.lbldia3.setText(diasemana.get(i + 2) + ".");
+				itf.lbldia4.setText(diasemana.get(i - 4) + ".");
+				dia2 = diasemana.get(i + 1);
+				dia3 = diasemana.get(i + 2);
+				dia4 = diasemana.get(i - 4);
+				
+			}else if (diasemana.get(i).equalsIgnoreCase(fechafinal) && i == 5){
+				itf.lbldia3.setText(diasemana.get(i - 5) + ".");
+				itf.lbldia4.setText(diasemana.get(i - 4) + ".");
+				dia2 = diasemana.get(i + 1);
+				dia3 = diasemana.get(i - 5);
+				dia4 = diasemana.get(i - 4);
+				
+			}else if (diasemana.get(i).equalsIgnoreCase(fechafinal) && i == 6){
+				itf.lbldia3.setText(diasemana.get(i - 5) + ".");
+				itf.lbldia4.setText(diasemana.get(i - 4) + ".");
+				dia2 = diasemana.get(i + 1);
+				dia3 = diasemana.get(i - 5);
+				dia4 = diasemana.get(i - 4);
 			}
 		}
 		
